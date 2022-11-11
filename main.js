@@ -1,4 +1,4 @@
-// arrays productos
+// arrays con cada producto para seleccioanr
 const products = [
     {
       id: 1,
@@ -110,7 +110,7 @@ const products = [
 
 
 
-// listado de variables
+// listado de las variables creadas
 
 const listaProductos = document.getElementById("lista-productos");
 
@@ -147,8 +147,8 @@ function registrarEventListeners() {
 function agregarProductos(e) {
     e.preventDefault();
     if(e.target.classList.contains("agregar-carrito")) {
-        const procuntoSeleccionado = e.target.parentElement.parentElement;
-        datosProcunto(procuntoSeleccionado)
+        const productoSeleccionado = e.target.parentElement.parentElement;
+        datosProducto(productoSeleccionado)
         
     }
 }
@@ -166,8 +166,8 @@ function eliminarProducto(e) {
         
     }
 }
-// Obteniendo datos del juego
-function datosProcunto(producto) {
+// consigue los datos del juego
+function datosProducto(producto) {
 
     //objeto del producto seleccionado
     const infoProducto = {
@@ -178,12 +178,12 @@ function datosProcunto(producto) {
         cantidad: 1
     }
 
-    // esta Revisa que no haya juegos duplicados en carrito
+    // lee que no haya juegos duplicados en carrito de compras
 
     const duplicado = productosCarrito.some( producto => producto.id === infoProducto.id);
     console.log(duplicado);
     if(duplicado) {
-        // Actualiza cantidad de juegos seleccionados
+        // Actualiza la cantidad de juegos seleccionados
         const Producto = productosCarrito.map( producto => {
             if(producto.id === infoProducto.id) {
                 producto.cantidad++;
@@ -203,7 +203,7 @@ function datosProcunto(producto) {
     carritoHTML();
 }
 
-// muestra el carrito de compras en html
+// refleja el carrito de compras en html
 
 function carritoHTML () {
 
