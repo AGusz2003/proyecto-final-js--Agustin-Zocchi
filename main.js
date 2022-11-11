@@ -1,4 +1,4 @@
-// // arrays con cada producto para seleccioanr
+/// arrays con cada producto para seleccioanr
 // const products = [
 //     {
 //       id: 1,
@@ -168,7 +168,7 @@ function eliminarProducto(e) {
         const productoId =e.target.getAttribute("data-id");
         Swal.fire({
           position: 'top-end',
-          icon: 'success',
+          icon: 'error',
           title: 'se ha eliminado el juego correctamente de tu carrito de compras',
           showConfirmButton: false,
           timer: 1500
@@ -195,7 +195,7 @@ function datosProducto(producto) {
         cantidad: 1
     }
 
-    // lee que no haya juegos duplicados en carrito de compras
+// lee que no haya juegos duplicados en carrito de compras
 
     const duplicado = productosCarrito.some( producto => producto.id === infoProducto.id);
     console.log(duplicado);
@@ -211,7 +211,7 @@ function datosProducto(producto) {
         } );
         productosCarrito = [...Producto];
     } else {
-    //agrega juegos al carrito de compras
+//agrega juegos al carrito de compras
         productosCarrito = [...productosCarrito, infoProducto];
     }
 
@@ -243,7 +243,7 @@ function carritoHTML () {
         contenedorCarrito.appendChild(row);
     });
 
-    // relacionado al Storage
+// relacionado al Storage
     aplicarStorage()
 
 }
