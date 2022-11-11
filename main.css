@@ -7,7 +7,7 @@
 body {
 	background-color: #4D0DA6;
 	color: #fff;
-	font-family: 'Roboto', sans-serif;
+	font-family: sans-serif;
 }
 
 header{
@@ -15,11 +15,12 @@ header{
 }
 
 .navbar{
-	background-color: #F2506E;
+	background-color:#F2506E;
 	width: 100%;
 }
 .logo{
-width: 65%;
+width: 100%;
+background-color:#570AB8;
 
 }
 
@@ -52,7 +53,7 @@ width: 65%;
 	background-size: cover;
 	background-position: center center;
     background-color:#F2E313;
-	color: #4D0DA6;
+	color: #000;
 }
 .btn-primary{
 	color: #fff;
@@ -66,7 +67,9 @@ th{
 	color: #fff ;
 }
 a{
-	color: #F2506E;
+	color: #F2E313;
+	text-decoration: none;
+
 }
 
 .borrar-producto {
