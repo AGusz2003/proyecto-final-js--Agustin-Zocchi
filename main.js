@@ -90,11 +90,6 @@ const products = [
         precio: 59.99,
         img:'./img/dark-soul.jfif',
       },
-      
-      
-    
-      
-
   ];
   
   products.forEach((product) => {
@@ -154,17 +149,21 @@ function agregarProductos(e) {
     if(e.target.classList.contains("agregar-carrito")) {
         const procuntoSeleccionado = e.target.parentElement.parentElement;
         datosProcunto(procuntoSeleccionado)
+        
     }
 }
 // Esta funcion elimina un juego seleccionado
 function eliminarProducto(e) {
     if(e.target.classList.contains("borrar-producto")) {
         const productoId =e.target.getAttribute("data-id");
+        
 
         //Elimina del carrito por id
         productosCarrito = productosCarrito.filter( producto => producto.id !== productoId);
         console.log(productosCarrito);
         carritoHTML ();
+        
+        
     }
 }
 // Obteniendo datos del juego
